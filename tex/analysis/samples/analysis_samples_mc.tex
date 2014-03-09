@@ -1,0 +1,105 @@
+\section{Monte Carlo samples}
+\label{sec:mc-samples}
+
+The collision data described in Section \ref{sec:data-samples}
+are compared to samples of Monte Carlo (MC) generated events.
+Different processes were modeled using MC generators, as detailed below.
+For the generation of all the MC samples, the {\tt CTEQ6L1}~\cite{cteq}
+parton distribution functions (PDFs) were used.
+The response of the detector was simulated using
+{\sc Geant4} as described in Section \ref{sec:reco-gen}. 
+The detector geometry description included
+realistic subsystem conditions such as defunct and noisy channels.
+
+The signal pair-production scalar first generation leptoquark MC samples were generated using 
+{\sc Pythia}~\cite{pythia}, version 6.422, tune Z2.
+Two different sets of leptoquark samples are produced: 
+one where both leptoquarks decay to electrons and up quarks (for the \eejj~channel), and 
+one where one leptoquark decays to an electron and an up quark and the
+other leptoquark decays to an electron neutrino and a down quark (for the \enujj~channel).
+In both cases, the leptoquarks are produced with a coupling equal to the
+electromagnetic coupling, $\lambda = \lambda_{\text{em}} = 0.3$.
+The leptoquarks modeled by the MC have an electric charge of $\pm 1/3$, corresponding to leptoquarks
+of type $S_{0,L}$ and $S_{1,L}$ as described by the Lagrangian in 
+Equation \ref{eqn:brw-lagrangian-f2} and shown in the
+top row of Table \ref{tab:lq-classification}.
+However, since neither the search in the \eejj~channel nor the search in the \enujj~channel
+are sensitive to leptoquark electric charge, hypercharge,
+or weak isospin, the leptoquarks modeled by the MC are
+representative of all of the scalar leptoquarks described
+by the mBRW model.
+11 samples were generated for the \eejj~channel, and 10 samples were generated for the \enujj~channel
+over different ranges of leptoquark masses.
+The range of leptoquark masses extends from 250 GeV to 900 for the \eejj~channel and
+from 250 to 850 for the \enujj~channel.  A broader mass range is needed for the \eejj~channel
+because it has lower background and greater sensitivity than the \enujj~channel.
+Table \ref{tab:lq-samples} shows the leptoquark mass value,
+final state, NLO cross section, number of generated events, and equivalent luminosity
+for each signal leptoquark sample.
+
+\begin{table}
+  \centering
+  \begin{tabular}{c|c|ccc}
+    M(LQ) $[\text{GeV}]$ & Final state & $\sigma \times \text{BR}$ (NLO) $[\text{pb}]$ & 
+    Events generated & Equivalent $\mathcal{L}_{\text{int}}$ [$\text{fb}^{-1}$] \\
+    \hline\hline
+    250 & \eejj & 3.47 & 64656 & 18.6 \\ 
+    350 & \eejj & 0.477 & 67528 & 141.6 \\ 
+    400 & \eejj & 0.205 & 52450 & 255.9 \\ 
+    450 & \eejj & $0.948 \cdot 10^{ -1 }$ & 52382 & 552.6 \\ 
+    500 & \eejj & $0.463 \cdot 10^{ -1 }$ & 61888 & 1336.7 \\ 
+    550 & \eejj & $0.236 \cdot 10^{ -1 }$ & 61910 & 2623.3 \\ 
+    600 & \eejj & $0.124 \cdot 10^{ -1 }$ & 49665 & 4005.2 \\ 
+    650 & \eejj & $0.676 \cdot 10^{ -2 }$ & 63664 & 9417.8 \\ 
+    750 & \eejj & $0.214 \cdot 10^{ -2 }$ & 51745 & 24179.9 \\ 
+    850 & \eejj & $0.732 \cdot 10^{ -3 }$ & 52432 & 71628.4 \\ 
+    900 & \eejj & $0.436 \cdot 10^{ -3 }$ & 59779 & 137107.8 \\ 
+    \hline
+    250 & \enujj & 1.74 & 60119 & 34.7 \\ 
+    350 & \enujj & 0.238 & 58891 & 246.9 \\ 
+    400 & \enujj & 0.102 & 68538 & 668.7 \\ 
+    450 & \enujj & $0.474 \cdot 10^{ -1 }$ & 59746 & 1260.5 \\ 
+    500 & \enujj & $0.232 \cdot 10^{ -1 }$ & 52636 & 2273.7 \\ 
+    550 & \enujj & $0.118 \cdot 10^{ -1 }$ & 64246 & 5444.6 \\ 
+    600 & \enujj & $0.620 \cdot 10^{ -2 }$ & 61474 & 9915.2 \\ 
+    650 & \enujj & $0.338 \cdot 10^{ -2 }$ & 57873 & 17122.2 \\ 
+    750 & \enujj & $0.107 \cdot 10^{ -2 }$ & 58450 & 54626.2 \\ 
+    850 & \enujj & $0.366 \cdot 10^{ -3 }$ & 54181 & 148035.5 \\ 
+  \end{tabular}
+  \caption{
+    Leptoquark masses, final states, NLO cross sections, number of events generated, and equivalent luminosities 
+    for pair-production scalar leptoquark MC samples.  All values correspond to 
+    $pp$ collisions at $\sqrt{s} = 7$~TeV (the LHC collision energy in 2010 and 2011).
+    Cross sections are given in units of pb ($1 \text{ b}= 10^{-28} \text{m}^2 = 10^{-24} \text{cm}^2$).
+    In all cases, the renormalization and factorization scale is set to be equal to the 
+    leptoquark mass. 
+  }
+  \label{tab:lq-samples}
+\end{table}
+
+MC samples were also generated to model the Standard Model background.
+\wjets~and \zjets~events were generated using {\sc Sherpa}~\cite{sherpa}.
+The \ttbar~and \gjets~events were generated using {\sc MadGraph}~\cite{madgraph-1,madgraph-2}.
+The single top events were generated using {\sc POWHEG}~\cite{powheg-st,powheg-w,powheg-1,powheg-2,powheg-3}.
+The diboson (WW, ZZ, WZ) events were generated using {\sc Pythia}.
+For the {\sc MadGraph} and {\sc POWHEG} samples, parton showering and hadronization were performed with {\sc Pythia}.
+The QCD multijet background is estimated from data, as described in Section~\ref{sec:qcd}.
+
+The total {\sc Sherpa} cross sections for the \wjets~and \zjets~samples
+were rescaled to inclusive next-to-next-to leading order (NNLO) values
+of 31314~pb (for \wjets) and 3048~pb (for $\text{Z}/\gamma \rightarrow \ell\ell$ with
+$\text{M}_{\ell\ell}>50$~GeV).  The {\sc Sherpa} cross sections were
+calculated using {\sc FEWZ}~\cite{fewz}.
+The {\sc MadGraph} \ttbar~sample was normalized to an 
+inclusive next-to-next-to-leading-logarithm (NNLL)
+\nomenclature{NNLL}{Next-to-next-to leading logarithm}
+cross section of 163~pb \cite{ttbar-xsection}.
+The \gjets~samples were normalized to LO cross sections calculated with {\sc MadGraph}.
+The single top samples were generated via three distinct
+channels: $s$-channel, $t$-channel, and $tW$-channel.
+An NNLL cross section of 3.6~pb was calculated for the s-channel~\cite{singletop-xsection}.
+NLO cross sections of 54.1~pb and 14.9~pb were calculated for the t-channel and tW-channel, respectively,
+using {\sc MCFM}~\cite{mcfm}.
+The WW, WZ, and ZZ samples were normalized to NLO cross sections of 47, 18.2, and 7.4~pb, 
+respectively, calculated with {\sc MCFM}. 
+

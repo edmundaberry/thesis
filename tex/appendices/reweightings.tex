@@ -1,0 +1,72 @@
+\chapter{Monte Carlo Reweightings}
+\label{app:reweightings}
+
+An overview of the reweightings being applied to the MC samples is
+shown in \cref{tb:reweightings}. The reweightings that are centrally
+provided to the \dzero{} collaborators by the \verb=VJets= group are
+indicated with ``\verb=VJets=''. The \verb=VJets= reweightings are
+documented in the references provided in the text.
+The other reweightings are specific to this search.
+The Z-\pt{} and W-\pt{} reweightings are described in
+\cref{sec:reweightings}.
+
+The instantaneous luminosity \instLumi{} and the beamspot $z$-position
+reweightings are applied to correct potential differeces between the
+distributions observed in data and MC for these two quantities. The
+distributions for \instLumi{} and for the the beamspot $z$-position
+are determined in MC by the data events used for the zero-bias
+overlay. Differences in the instantaneous luminosity profile can cause
+data-MC discrepancies in the calorimeter noise and in the tracking
+efficiency. Differences in the beamspot $z$-position can cause data-MC
+discrepancies in the tracking acceptance.
+
+For the diboson WW sample, a \dphi{\ell}{\ell} reweighting is applied
+in addition to the WW \pt{} reweighting discussed in
+\cref{sec:reweightings}. The \dphi{\ell}{\ell} reweightings accounts
+for the fact that the \pythia{}-generated samples include the
+$\Pquark{}\Pquark{}\to\PW\PW$ contribution, but not the
+$\Pgluon{}\Pgluon{}\to\PW\PW$ contribution.
+
+All the reweightings computed from data are derived in the same way.
+The histograms containing the distribution of the variables for which
+the reweighting is being computed are rebinned. The bins have variable
+width, and their width is chosen so that the number of events in each
+bin is sufficient to avoid large statistical fluctuations. The
+bin-by-bin ratio of data/MC is then computed, and the resulting
+histogram is modified by a smoothing algorithm.
+
+The reweighting of the jet $\eta$ and $\dR{j_1}{j_2}$ distributions is
+attributed to a limitation of the \alpgen{} generator. The jet
+reweightings are applied to the \zGam{} samples only.
+
+\begin{center}
+\begin{tabular}{ l  c  c c }
+  \toprule
+  Reweighting                & Samples               & Notes  \\
+  \midrule
+  Z-\pt{} inclusive          & \zGamJets{}           &   \verb=VJets= \\
+  Z-\pt{} N-jet dep.         & \zGamJets{}           &   \verb=VJets= \\
+  W-\pt{} N-jet dep.         & \wJets{}              &   \verb=VJets= \\
+  Instantaneous luminosity   & All                   &   \verb=VJets= \\
+  Beamspot $z$-position      & All                   &   \verb=VJets= \\
+  WW $p_T$                   & Diboson WW            &   \mcatnlo{} \\
+  WW $\Delta\phi$            & Diboson WW            &   \sherpa{} \\
+  H $p_T$                    & \ggHww{}              &   \hqt{} \\
+  Detector $\eta$            & All, inclusive        &   From data\\
+  Unclustered energy         & All, N-jet sep.       &   From data\\
+  Jet1 $\eta$                & \zGam{}, 1-jet and 2-jet  &   From data\\
+  Jet2 $\eta$                & \zGam{}, 2-jet            &   From data\\
+  $\dR{j_1}{j_2}$            & \zGam{}, 2-jet            &   From data\\
+\bottomrule
+\end{tabular}
+\label{tb:reweightings}
+\end{center}
+% The \dphi{\ell}{\ell} distributions of the production processes
+%   $qq\to{}WW$ and $gg\to{}WW$ differ significantly.  Since this
+%   difference is not considered by Pythia an appropriate reweighting at
+%   parton level has been derived and applied to the $WW$ background
+%   sample. The uncertainty due to the $gg\to{}WW$ reweighting are
+%   calculated by not applying the reweighing and symmetrizing 30\% of
+%   the resulting uncertainty.  The uncertainty is found to be at the
+%   order of 1\%.\checkThis{rephrase, move some stuff to
+%     \ref{sec:reweightings}}

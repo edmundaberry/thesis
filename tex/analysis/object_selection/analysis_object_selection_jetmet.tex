@@ -1,0 +1,60 @@
+\section{Jets}
+
+The jets used in this analysis are reconstructed
+by running the anti-$k_{\text{T}}$ jet algorithm with a 
+radius parameter of 0.5 over PF candidates, as described in Section
+\ref{sec:jetmet}.  On top of the selection applied during 
+reconstruction and detector electronics noise cleaning applied during jet reconstruction, 
+a further jet identification selection is applied to reduce contamination from detector electronics noise or
+single particles (electrons, for example) that are reconstructed as jets.
+This additional identification selection is particular to PFJets 
+and is referred to as ``loose jet ID''.
+
+The loose jet ID is a cut-based ID, and the contributing variables are 
+described below.
+The numerical requirements for each of these variables are shown
+in Table \ref{tab:jetid}.
+
+\begin{table}
+  \centering
+  \begin{tabular}{c|c}
+    Variable & Criterion \\
+    \hline\hline
+    \multicolumn{2}{c}{For all jets} \\
+    \hline
+    Neutral hadronic fraction & $<0.99$ \\
+    Neutral electromagnetic fraction & $<0.99$ \\
+    Number of constituents & $> 1$ \\
+    \hline
+    \multicolumn{2}{c}{For jets with $|\eta| < 2.4$} \\
+    \hline
+    Charged hadronic fraction & $>0$ \\
+    Charged electromagnetic fraction & $<0.99$ \\
+    Charged multiplicity & $>0$ \\
+  \end{tabular}
+  \caption{The loose jet ID selection criteria for PFJets}
+  \label{tab:jetid}
+\end{table}
+
+\begin{itemize}
+  \item {\bf Neutral hadron fraction:} fraction of the total jet energy associated with hadronic energy deposits that are not linked to tracks
+  \item {\bf Neutral electromagnetic fraction:} fraction of the total jet energy associated with electromagnetic energy deposits that are not linked to tracks
+  \item {\bf Number of constituents:} number of PF candidates included in the jet
+  \item {\bf Charged hadron fraction:} fraction of the total jet energy associated with hadronic energy deposits that are linked to tracks
+  \item {\bf Charged electromagnetic fraction:} fraction of the total jet energy associated with electromagnetic energy deposits that are linked to tracks
+  \item {\bf Charged multiplicity:} number of charged PF candidates included in the jet
+\end{itemize}
+
+Only jets with $\pt > 30$ GeV are considered
+for the \eejj~analysis, and only jets with $\pt > 40$ GeV
+are considered for the \enujj~analysis.  In both analyses,
+only jets with $|\eta| < 2.4$ are considered.
+Finally, to address the double-counting of well identified and isolated 
+electrons and muons reconstructed also as jets, for each selected electron 
+or muon the closest selected jet within 
+$\Delta R=0.3$\footnote{$\Delta R$ is defined as $\sqrt{\Delta\phi^2+\Delta\eta^2}$}
+is removed from the jet collection.  In this context,
+``selected'' electrons, muons, and jets are required to pass the \pt~cut of 
+the event pre-selection described in the next sections, 
+and the ID/isolation and noise cleaning requirements.
+

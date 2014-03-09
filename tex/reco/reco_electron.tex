@@ -1,0 +1,50 @@
+\section{Electron reconstruction}
+\label{sec:reco-electron}
+
+Electrons in CMS are reconstructed using input from two detectors:
+the inner tracker, which reconstructs electron tracks, and the ECAL,
+into which electrons deposit most of their energy.
+The primary challenge in reconstructing electrons stems from the fact
+that electrons emit a large fraction of their total energy via 
+Bremsstrahlung radiation while traversing the inner tracker.  
+If an electron undergoes Bremsstrahlung radiation within the tracker,
+the electron trajectory may be significantly altered.  These deviations
+must be accounted for by both track and energy reconstruction algorithms.
+
+Just as there are two complimentary subdetectors with which to measure electrons
+in the CMS detector, CMS uses two complimentary algorithms to seed the 
+track reconstruction process: tracker-driven seeding and ECAL-driven 
+seeding.  It is possible for an electron to be reconstructed using both algorithms.
+The tracker-driven seeding algorithm performs best for electrons that have 
+low \pt~or are buried inside jets.
+The ECAL-driven seeding algorithm is optimized for isolated electrons down to 
+$\pt \simeq 5$~\GeV, which (in principle) includes electrons from leptoquark decays.
+Electrons radiating within the tracker tend to deposit their energy within 
+several ECAL crystals.  Approximately 94\% of the incident electron energy
+is contained in $3\times3$~crystals, and 97\% of the incident electron
+energy is contained within $5\times5$ crystals \cite{cms-tdr}.  In addition,
+electron energy tends to be deposited in the ECAL in a narrow region in 
+pseudorapidity and a longer region in $\phi$, due to the electron's trajectory 
+within the magnetic field.  To capture and reconstruct as much of this energy 
+as possible without using input from empty or unnecessary crystals, 
+the electron reconstruction algorithm makes use of a ``supercluster'' pattern.
+A supercluster is a collection of one or more clusters of energy deposits in 
+the ECAL within a narrow region in pseudorapidity and a longer region in $\phi$.
+The ECAL-driven seeding algorithm begins by considering superclusters with transverse energy
+greater than 4~\GeV~and a ratio of hadronic energy from behind the supercluster
+over the supercluster energy of $H/E < 0.15$.  
+As a first filtering step, these superclusters are required to be matched to
+track seeds, which are composed of pairs or triplets of hits in the inner
+track layers.  The electron trajectory is reconstructed using a dedicated
+modeling of the electron energy loss via Bremsstrahlung radiation
+and fitted with a Gaussian Sum Filter (GSF)
+\nomenclature{GSF}{Gaussian sum filter} \cite{gsf}.
+The final electron energy measurement may be taken from the GSF track,
+the supercluster energy, or some combination of the two
+\cite{electron-1,electron-2,electron-3}.
+
+The first filtering step is complimented by a preselection, which varies
+depending on the seeding algorithm used.  In the case of the tracker-driven
+seeding, the preselection is based on a multivariate analysis \cite{pf-1}.
+In the case of the ECAL-driven seeding, the preselection is based on
+matching the supercluster to the GSF track in $\eta$ and $\phi$ \cite{electron-1}.

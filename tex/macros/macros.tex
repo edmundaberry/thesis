@@ -1,0 +1,106 @@
+%%% input custom definitions here
+
+\newcommand{\eejj}{$eejj$}
+\newcommand{\enujj}{$e\nu jj$}
+\newcommand{\nunujj}{$\nu\nu jj$}
+\newcommand{\mumujj}{$\mu\mu jj$}
+\newcommand{\munujj}{$\mu\nu jj$}
+\newcommand{\emujj}{$e\mu jj$}
+\newcommand{\zjets}{$\text{Z}^{0}$+jets}
+\newcommand{\wjets}{$\text{W}$+jets}
+\newcommand{\gjets}{$\gamma$+jets}
+\newcommand{\ttbar}{$t\overline{t}$}
+
+\newcommand{\dEtaIn} {$\Delta\eta_{\text{in}}$}
+\newcommand{\dPhiIn} {$\Delta\phi_{\text{in}}$}
+\newcommand{\HoE} {$H/E$}
+\newcommand{\SigmaiEtaiEta} {$\sigma_{{\rm i}\eta{\text{i}}\eta}$}
+\newcommand{\ETwoEFive} {$E^{2\times5}/E^{5\times5}$}
+\newcommand{\EOneEFive} {$E^{1\times5}/E^{5\times5}$}
+\newcommand{\EMIso}{$\text{EM}_{\text{Iso}}$}
+\newcommand{\HADIso}{$\text{HAD}_{\text{Iso}}$}
+\newcommand{\HADIsoOne}{$\text{HAD}^{\text{layer1}}_{\text{Iso}}$}
+\newcommand{\HADIsoTwo}{$\text{HAD}^{\text{layer2}}_{\text{Iso}}$}
+\newcommand{\TRKIso}{$\text{TRK}_{\text{Iso}}$}
+\newcommand{\akt}{anti-$k_{\text{T}}$}
+
+\newcommand{\pt}{\ensuremath{p_{\text{T}}}}
+\newcommand{\ptvec}{\ensuremath{\vec{p}_{\text{T}}}}
+\newcommand{\et}{\ensuremath{E_{\text{T}}}}
+\newcommand{\Et}{\ensuremath{E_{\text{T}}}}
+\newcommand{\st}{\ensuremath{S_{\text{T}}}}
+\newcommand{\mee}{\ensuremath{m_{\text{ee}}}}
+\newcommand{\mej}{\ensuremath{m_{\text{ej}}}}
+\newcommand{\mejmin}{\ensuremath{m_{\text{ej}}^{\text{min}}}}
+\newcommand{\mejavg}{\ensuremath{m_{\text{ej}}^{\text{avg}}}}
+\newcommand{\metvec}{\ensuremath{\not\!\!{\vec{E}_{\text{T}}}}}
+\newcommand{\met}{\ensuremath{\not\!\!{E_{\text{T}}}}}
+\newcommand{\MET}{\ensuremath{\not\!\!{E_{\text{T}}}}}
+\newcommand{\mt}{\ensuremath{m_{\text{T, e}\nu}}}
+\newcommand{\mtjnu}{\ensuremath{m_{\text{T, j}\nu}}}
+\newcommand{\Lint}{$\mathcal{L}_{int}$}
+\newcommand{\minptmet}{$\mbox{min}(p^\text{e}_{\rm T},\mbox{\MET})$}
+\newcommand{\dphimetele}{$\Delta\phi(\mbox{\MET},\text{e})$}
+\newcommand{\dphimetjetone}{$\Delta\phi(\mbox{\MET},\mbox{j1})$}
+\newcommand{\dphimetjettwo}{$\Delta\phi(\mbox{\MET},\mbox{j2})$}
+\newcommand{\dRejone}{$\Delta R(e,\mbox{j1})$}
+\newcommand{\dRejtwo}{$\Delta R(e,\mbox{j2})$}
+\newcommand{\dRejets}{$\mbox{min}\Delta R(\text{e},\mbox{jets})$}
+\newcommand{\MLQ}{$M_{\rm LQ}$}
+
+\newcommand{\doublet}[2]{
+  \left(\!
+    \begin{array}{c}
+      {#1} \\
+      {#2}
+    \end{array}
+    \!\right) 
+}
+
+\def \lumi {4.95~fb$^{-1}$\xspace} 
+\def \lumiPhoton {4.95~fb$^{-1}$\xspace}  %correct value: 4.656
+\def \lumiSingleElePlusEleHad {4.95~fb$^{-1}$\xspace} %correct value: 4.649
+\def  \lumiMuEG {4.95~fb$^{-1}$\xspace} %correct value: 4.667
+\def \JSON {\tiny /afs/cern.ch/cms/CAF/CMSCOMM/COMM\_DQM/certification/Collisions11/7TeV/Prompt/Cert\_160404-180252\_7TeV\_PromptReco\_Collisions11\_JSON.txt \\ /afs/cern.ch/cms/CAF/CMSCOMM/COMM\_DQM/certification/Collisions11/7TeV/Reprocessing/Cert\_160404-163869\_7TeV\_May10ReReco\_Collisions11\_JSON\_v3.txt \\ /afs/cern.ch/cms/CAF/CMSCOMM/COMM\_DQM/certification/Collisions11/7TeV/Reprocessing/Cert\_170249-172619\_7TeV\_ReReco5Aug\_Collisions11\_JSON\_v3.txt \xspace}
+\def \Npileup {9.5\xspace} %% : average number of pile-up interactions for the sample considered
+\def \NpileupA {6.5\xspace} %% : average number of pile-up interactions for the sample considered
+\def \NpileupB {12\xspace} %% : average number of pile-up interactions for the sample considered
+\def \ContaminationAtZpeak {$\approx 5\%$\xspace} %% : contamination of other than Z backgrounds at the Z peak
+\def \ContaminationAtWpeak {$\approx 40\%$\xspace} %% : contamination of other than W backgrounds at the W peak
+\def \ContaminationAtTTBARenujj {$\approx 30\%$\xspace} %% : 
+\def \ContaminationAtTTBARemujj {$\approx 2\%$\xspace} %% : 
+\def \ContaminationAtQCDForClosureTestLooseLoose {$\approx 5\%$\xspace} %% : 
+\def \ContaminationAtQCDForClosureTestLooseTight {$\approx 30\%$\xspace} %% : 
+\def \ratioEmuRecoEff{$ 0.98 \pm 0.02 \mbox{ (stat.)} \pm 0.02 \mbox{ (syst.)}$\xspace} %% : use updated rescaling factor
+\def \rescaleFactorTTBAReejj{$ 0.49 \pm 0.01 \mbox{ (stat.)} \pm 0.01 \mbox{ (syst.)}$\xspace} %% : use updated rescaling factor
+\def \rescaleFactorTTBARenujj{$0.72 \pm 0.06 \mbox{ (stat.)} \pm 0.04 \mbox{ (syst.)}$}
+\def \rescaleFactorWSherpa{$1.26 \pm 0.05 \mbox{ (stat.)} \pm 0.03 \mbox{ (syst.)}$}
+\def \rescaleFactorZSherpa{$1.27 \pm 0.02 \mbox{ (stat.)} \pm 0.001 \mbox{ (syst.)} $}
+\def \QCDcontributionINeejj {$\approx 1\%$\xspace} %% : 
+\def \QCDcontributionINenujj {$\approx 8\%$\xspace} %% : 
+\def \OtherBackgroundContributionINeejj {$10\%$\xspace} %% : 
+\def \OtherBackgroundContributionINenujj {$20\%$\xspace} %% : 
+\def \NeventsLTJpred{$10730 \pm 941$\xspace} %% : 
+\def \NeventsLTJactual{$14790 \pm 465$\xspace} %% : 
+\def \NeventsLTJpredSTCUT{$290 \pm 22$\xspace} %% : 
+\def \NeventsLTJactualSTCUT{$232 \pm 40$\xspace} %% : 
+\def \RatioLTJpredVSactual{$0.73 \pm 0.06$\xspace} %% : 
+\def \RatioLTJpredVSactualSTCUT{$1.25 \pm 0.23$\xspace} %% : 
+\def \QCDUncertEnujj{25\%\xspace} %%: 
+\def \QCDUncertEEjj{50\%\xspace} %% :
+\def \ObservedLimitBetaOneeejj{830\xspace} %% :
+\def \ObservedLimitBetaHalfenujj{640\xspace} %% :
+\def \ObservedLimitBetaHalfenujjCombined{640\xspace}
+\def \ObservedLimitBetaHalfenujjOnlyMCStat{642\xspace}
+\def \ExpectedLimitBetaOneeejj{790\xspace} %% :
+\def \ExpectedLimitBetaHalfenujj{640\xspace} %% :
+\def \ExpectedLimitBetaHalfenujjCombined{680\xspace}
+
+\def \EESEB{1\%}
+\def \EESEE{3\%}
+\def \EEREB{1\%}
+\def \EEREE{3\%}
+\def \JES{4\% \xspace}
+\def \BkgShapeUncerZJetsEEJJ{15\%\xspace}
+\def \BkgShapeUncerWJetsENUJJ{20\%\xspace}
+\def \BkgShapeUncerTtbarENUJJ{10\%\xspace}

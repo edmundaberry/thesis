@@ -1,0 +1,46 @@
+\section{Event generation and simulation}
+\label{sec:reco-gen}
+
+Simulated events play an essential role in exotic searches
+like the one presented in this thesis.  Simulated events 
+are produced using Monte Carlo methods, and the resulting 
+datasets themselves are often refered to as Monte Carlo (MC) datasets.
+\nomenclature{MC}{Monte Carlo}
+These MC datasets allow background Standard Model processes
+to be studied in isolation from each other, and they can 
+also be combined to provide an approximate estimate of the total 
+Standard Model background for the search.  In addition, 
+MC datasets allow physicists to study as yet unobserved exotic
+signals under various hypotheses, including varying masses, branching
+fractions, and other parameters.
+
+In this thesis, all MC datasets are produced by simulating
+interacting partons by using a given parton distribution function
+(PDF).  Many different parton distribution functions are available,
+but this analysis makes use of the {\tt CTEQ6L1} PDFs in all cases
+\cite{cteq}.  The hard scattering in these parton-parton interactions is modeled using
+event generators.  Different event generators are used to model
+different processes in this analysis.  These include
+{\sc Pythia}~\cite{pythia},
+{\sc Sherpa}~\cite{sherpa},
+{\sc MadGraph}~\cite{madgraph-1,madgraph-2}, and 
+{\sc POWHEG}~\cite{powheg-st,powheg-w,powheg-1,powheg-2,powheg-3}.  
+For all processes in this thesis, the decay and hadronization of the particles
+emerging from the hard scatter is modeled by {\sc Pythia}.
+
+In addition, pile-up $pp$ interactions taking place in the same
+bunch crossing as the interaction of interest must be modeled in all MC samples.  
+Since the number of pile-up interactions in data depends on 
+frequently changing conditions at the LHC, the pile-up distribution in all MC samples
+must be reweighted to agree with data.  A systematic uncertainty associated with this
+reweighting is taken into account in all CMS analyses, and it is discussed in the 
+context of this analysis in Section \ref{sec:pile-up-uncertainty}.
+
+In order to compare simulated events to data,
+it is also necessary to model the interactions of simulated particles with the CMS detector.
+This modeling is performed by the {\sc Geant4} simulation toolkit \cite{geant},
+which has been built into the CMS software framework.
+The digital signals from the detector's response to these particle 
+interactions are also simulated.  These simulated digital signals allow the same 
+reconstruction algorithms to be run over simulated events and real events
+from the CMS detector \cite{cms-tdr,cms-jinst}.

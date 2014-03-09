@@ -1,0 +1,46 @@
+\subsection{Trigger}
+\label{sec:eejjTrigger}
+
+Events in the \eejj~channel are selected online using unprescaled double photon or double electron triggers,
+depending on the run period.
+These triggers require the presence of two clusters in the ECAL, each with a transverse
+energy $\et > 33$~GeV and each matched to hits in the pixel detector.  The triggers
+also require the absence of significant energy deposits in the HCAL cells directly behind the ECAL clusters.
+The exact trigger used depends on the run period.
+The full list of triggers for the \eejj~channel and their associated run periods are are 
+listed in Table~\ref{tab:eejjDoublePhotEleHLT}.
+
+\begin{table}
+  \begin{center}
+    \small
+    \begin{tabular}{l|c} 
+      HLT path & Run number range \\
+      \hline\hline
+      \multicolumn{2}{c}{Run2011A} \\
+      \hline
+      \verb HLT_DoublePhoton33_v1 & 160404--161176  \\%\& \\
+      \verb HLT_DoublePhoton33_v2 &  161216--163261\\%& \\
+      \verb HLT_DoublePhoton33_v3 &  163269--163869 \\%&\\
+      \verb HLT_DoubleEle33_CaloIdL_v1 &  165088--165633 \\%& \\
+      \verb HLT_DoubleEle33_CaloIdL_v2 &  165970--166967 \\%& \\
+      \verb HLT_DoubleEle33_CaloIdL_v3 &  167039--167913 \\%& \\
+      \verb HLT_DoubleEle33_CaloIdL_v4 &  170249--173198 \\%& \\
+      \verb HLT_DoubleEle33_CaloIdL_v5 &  173236--173692 \\%& \\
+      \hline
+      \multicolumn{2}{c}{Run2011B}  \\
+      \hline
+      \verb HLT_DoubleEle33_CaloIdL_v5 &  175832--178380 \\%& \\
+      \verb HLT_DoubleEle33_CaloIdT_v2 &  178420--179889 \\%& \\
+      \verb HLT_DoubleEle33_CaloIdT_v3 &  179959--180252 \\%& \\
+    \end{tabular}
+    \caption{HLT paths for \eejj~channel}
+    \label{tab:eejjDoublePhotEleHLT}
+  \end{center}
+\end{table}
+        
+The efficiency with which these triggers select events with two HEEP electrons 
+(described in Section~\ref{sec:id-electron}) has been studied in the context of the Z'$\rightarrow \mbox{ee}$ 
+analysis~\cite{zprime-2011}, and it is taken to be 100\% with less than 1\% uncertainty.
+A fully efficient trigger is also assumed in the \eejj~channel.
+Events used for background estimates are not required to pass these triggers:
+data-driven background estimates use different triggers, and MC events are not required to pass any trigger.

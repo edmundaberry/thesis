@@ -1,0 +1,46 @@
+\section{$W/Z+$jets background}
+\label{sec:vjets}
+
+Once the QCD multijets and \ttbar~background estimates have been determined,
+the \zjets~and \wjets~contributions may be extracted.
+In both the \eejj~and \enujj~channels, the \zjets~and \wjets~contributions
+to the total background estimates are obtained using MC that has
+been rescaled within control regions.
+  
+\subsection{\zjets~background in the \eejj~channel} 
+\label{sec:eejjZjetsBkg}
+
+The \zjets~selection efficiency in the \eejj~analysis is derived from MC.
+The \zjets~MC sample normalization is obtained by comparing 
+data and simulation as described below.
+
+After applying the \eejj~preselection and requiring that the invariant mass 
+of the di-electron pair is close to the \PZz~peak 
+($70<\mbox{\mee}<110$~\GeV), the sample is dominated by \zjets~events 
+with a contamination from other SM processes of \ContaminationAtZpeak, estimated from MC, 
+mostly coming from \ttbar~and diboson events.
+At this stage of the selection, the data are compared to the background predictions
+and an overall good agreement is found in the shape of the 
+distributions of all the observables employed in the final selection.
+A data/MC rescaling factor is then computed for the \zjets~background, using Equation \ref{eqn:zjetsRescale}:
+\begin{equation}
+  \mathcal{R}_{\mbox{\PZz}} = \frac{\mbox{N}_{\mbox{data}} - ( \mbox{N}_{\mbox{Others}} + \mbox{N}_{\mbox{QCD}} )}{\mbox{N}_{\mbox{\PZz}}} = \mbox{\rescaleFactorZSherpa}
+  \label{eqn:zjetsRescale}
+\end{equation}
+where $\mbox{N}_{\mbox{data}} $, $\mbox{N}_{\mbox{Others}}$, $\mbox{N}_{\mbox{\PZz}}$, 
+and $\mbox{N}_{\mbox{QCD}}$ are, respectively, the number of events in data, the 
+number of events predicted by other MC samples (including \ttbar, \wjets, 
+diboson, and others), the number of events predicted by the \zjets~MC sample before rescaling, 
+and the number of events predicted by the QCD multijet events obtained with the method described in Section~\ref{sec:qcd}.
+This factor is already included in the \zjets~MC predictions for \eejj~channel.
+The systematic uncertainty on the rescaling factor comes from the systematic uncertainty on the 
+data driven QCD multijet and \ttbar~estimates.
+
+\subsection{\wjets~background in the \enujj~channel} 
+\label{sec:enujjWjetsBkg}
+
+The \wjets~selection efficiency in the \enujj~analysis is derived from MC.
+The \wjets~MC sample normalization is obtained by comparing 
+data and simulation, simultaneously with the \ttbar~background, 
+as described in Section~\ref{sec:enujjTTbarWJetsBkg}.
+

@@ -1,0 +1,52 @@
+\section{Track reconstruction}
+\label{sec:reco-track}
+
+Reconstruted charged particle trajectories or ``tracks''
+are formed using information from the pixel tracker
+and the silicon strip tracker.  Because the track reconstruction
+process begins before any primary decay vertices have been 
+reconstructed, it is dependent on a precise estimate of the ``beamspot'',
+i.e. the location of the interaction point in the transverse plane, 
+which is calculated using a beamspot fitter \cite{beamspot-fitter}.
+
+Once the beamspot position has been estimated, track reconstruction proceeds
+using an iterative process, which is performed by the combinatorial
+track finder (CTF)
+\nomenclature{CTF}{Combinatorial track finder}
+\cite{track-reco-2010,ctf-1,ctf-2}.
+Each iteration begins reconstructing tracks using ``seeds'', 
+which may be thought of as starting points for initial estimates of fully
+reconstructed particle tracks.  
+Seeds are either triplets of hits in the tracker or pairs of hits with 
+the beamspot or a pixel vertex used as an additional constraint.  
+These seeds yield a preliminary estimate of the particle track with an associated
+uncertainty, and they are then propagated outward in a search for additional
+hits to associate with the track.
+Once found, compatible hits are added to the track, and the track's 
+parameters and associated uncertainties are recalculated.
+In each iteration, the outward search for hits continues until either the boundary of the tracker has been
+reached or no additional hits can be found.  The search is then repeated by starting from the 
+outermost hits and propagating them inward.  The final step of each iteration is to fit the hits
+to obtain an estimate of the track's parameters.
+Between iterations, hits that are unambiguously associated with a track
+are removed from consideration for searches for additional hits.  This creates
+a smaller collection of hits for the next iteration to consider.
+After each iteration, reconstructed tracks are fitted to remove tracks that are likely fakes
+and to assess the quality of the remaining tracks.  This filtering for likely fakes uses
+the number of hits, the normalized $\chi^2$ of the track, and the compatibility of the 
+track originating from a pixel vertex.  Tracks that pass the tightest filtering selection
+are labeled ``highPurity''.
+
+The full track reconstruction process uses
+a total of six iterations.
+The difference between each iteration has largely to do
+with its seeds.  Seeds for the first two iterations consist only of 
+triplets of pixel tracker hits and pairs of pixel tracker hits with pixel
+vertices and the beamspot as an additional constraint.  These first two iterations
+find prompt tracks with $\pt > 0.9$~GeV.  The third iteration uses pixel triplets 
+as seeds to reconstruct tracks without a \pt~requirement.
+The fourth iteration uses both pixel and strip layers as seeds, which allows the 
+reconstruction algorithm to reconsrtuct displaced tracks.  
+The fifth and sixth iterations use strip pairs as seeds to reconstruct tracks
+that do not have pixel hits \cite{track-reco-2010}.
+

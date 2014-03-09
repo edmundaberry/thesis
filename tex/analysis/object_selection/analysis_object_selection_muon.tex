@@ -1,0 +1,75 @@
+\section{Muons}
+\label{sec:id-muon}
+
+
+The muon candidates used in this analysis are taken from
+global muons, which are reconstructed according to the process
+described in Section \ref{sec:reco-muon}.
+On top of the selection applied during reconstruction,
+a further muon identification selection is applied to reduce contamination from various backgrounds.
+This additional identification selection is known as the ``tight'' muon ID, and it 
+was developed by the muon physics object group within CMS.  
+Significant backgrounds include muons produced within jets
+and hadrons that are incorrectly identified as muons.  
+These misreconstructed objects are refered to as ``fake muons'', and two important sources of them are
+hadrons decaying to muons while passing through the detector 
+(e.g. $\pi^{\pm} \rightarrow \mu^{\pm} \nu_{\mu}$, ``decay in flight'')
+and hadrons that pass through the entire detector and interact with the 
+muon subsystem without showering (``punch through'').
+The tight muon ID has been studied in detail
+\cite{muon-1}, and it is used by many CMS analyses that include muons in their final
+stat, including the second generation leptoquark analysis \cite{pair-lq-CMS}.
+
+Like the HEEP ID for electrons,
+the tight muon ID is a cut-based ID, and the variables contributing to it are described
+below. The numerical requirements for each of these variables are shown
+in Table \ref{tab:muon-tight}.
+
+\begin{table}
+  \centering
+  \begin{tabular}{c|c}
+    Variable & Criterion \\
+    \hline\hline
+    Pixel hits & $>0$ \\
+    Tracker hits & $>10$ \\
+    Muon chamber hits & $>0$ \\
+    Muon stations & $>1$ \\
+    $|d_{xy}|$ & $<2 \text{ mm}$ \\
+    $\chi^2/\text{ndof}$ & $<10$ \\
+    Tracker isolation & $< 3$ GeV \\
+  \end{tabular}
+  \caption{The ``tight'' selection criteria for muon ID and isolation.}
+  \label{tab:muon-tight}
+\end{table}
+
+\begin{itemize}
+  \item {\bf Muon reconstruction algorithm.} Several muon reconstruction algorithms 
+    are used by various analyses at CMS.  In this analysis, the muon must be a global muon.
+  \item {\bf Pixel hits:} number of hits in the pixel detector.  This value must be large
+    in order to suppress muons from decays in flight.
+  \item {\bf Tracker hits:} number of hits in the inner tracker system (including the pixel detector) included in the global
+    muon fit.  This number must be large in order to guarantee a good \pt~measurement and to 
+    suppress muons from decays in flight.
+  \item {\bf Muon chamber hits:} number of hits in the muon subsystem included in the global
+    muon fit.  This number must be large in order to suppress 
+    fake muons from punch through and decays in flight.
+  \item {\bf Muon stations:} number of muon stations with muon segments in them which contribute
+    to the global muon fit.  This number must be large in order to suppress fake muons from punch through
+    and accidental matches between unrelated tracks from the inner 
+    tracker and segments from the muon system.  In addition, requiring at least two muon stations
+    makes this selection consistent with the logic of the muon trigger.
+  \item {\bf $\chi^2/\text{ndof}$:} an evaluation of the quality of the global muon fit.
+    This value must be small in order to suppress fake muons from punch through and decays in flight.
+  \item {\bf $d_{xy}$:} transverse impact parameter with respect to the primary vertex.  This
+    number must be small in order to suppress cosmic muons and to 
+    suppress fake muons from decays in flight.  The cut is loose enough to preserve efficiency for 
+    muons from decays of long-lived hadrons containing $b$ and $c$ quarks.
+  \item {\bf Tracker isolation:} the sum of the \pt~of the tracks within a cone
+    of radius $\sqrt{\Delta\phi^2\times\Delta\eta^2} = 0.3$ around the muon track, excluding the muon 
+    track itself.  This requirement is not part of the tight muon ID.  It is applied in addition
+    to the tight muon ID in order to suppress muons that are contained within jets.
+\end{itemize}
+
+Additionally for this analysis, muon candidates must have $\pt > 30$ and at least one muon in the event
+must be reconstructed in the HLT fiducial volume, $i.e.$ with $|\eta| < 2.1$.
+

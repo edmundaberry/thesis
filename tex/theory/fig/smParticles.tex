@@ -1,0 +1,92 @@
+%
+% Sketch of the SM particles and interactions
+%
+\begin{tikzpicture}
+  [x=16cm,y=8cm,node distance=2cm,auto,
+    every loop/.style={},
+    % particle/.style={circle,draw=blue!50,fill=blue!20,thick}]
+    particle/.style={circle,draw=black!50,fill=white!20,thick}]
+  % Particles
+  \node[particle] at (4cm,7cm) (L) {$\Plepton^{\pm}$};
+  \node at (3cm,9cm) (leptons) {  % table with leptons
+    \begin{tabular}{ccc}
+      \multicolumn{3}{c}{Leptons (\Pneutrino, $\Plepton^{\pm}$)} \\
+      \hline 
+      \Pnue & \Pnum & \Pnut \\
+      \Pe & \Pmu & \Ptau \\
+    \end{tabular}
+  };
+  \node[right of=L] (dummyRL) {};
+  \node[right of=dummyRL] (dummyRRL) {};
+  \node[below left of=L] (dummyBL) {};
+  \node[particle] (Q) [right of=dummyRRL]{\Pquark};
+  \node at (10cm,9cm) (quarks) {  % table with quarks
+    \begin{tabular}{ccc}
+      \multicolumn{3}{c}{Quarks (\Pquark)} \\
+      \hline
+      \Pup & \Pcharm & \Ptop \\
+      \Pdown & \Pstrange & \Pbottom \\
+    \end{tabular}
+  };
+  \node[particle] (L2) [above left of=dummyBL]{\Pneutrino};
+  \node[particle] (P) [below left of=dummyBL]{\Pphoton};
+  \node[particle] (W) [below right of=dummyBL]{\PW};
+  \node[particle] (Z) [right of=W]{\PZ};
+  \node[right of=Z] (dummyRZ) {};
+  \node[particle] (G) [right of=dummyRZ]{\Pgluon};
+  \node[below of=P] (dummyBP) {};
+  \node[particle] (H) [below right of=dummyBP]{\PH};
+
+  % Interactions
+  \path
+  (L)  edge [bend right] (P)
+  (L)  edge [bend right] (H)
+  (L)  edge [bend left] (W)
+  (L)  edge [bend left] (Z)
+  (L2)  edge [bend left] (H)
+  (L2)  edge [bend left] (W)
+  (L2)  edge [bend left] (Z)
+  % (L2)  edge [bend left] (L)
+  (Q) edge [bend right=20] (P)
+  (Q) edge [bend right=20] (W)
+  (Q) edge [bend right=20] (Z)
+  (Q) edge [bend left=20] (G)
+  (Q) edge [bend left=20] (H)
+  (P) edge [bend right] (W)
+  (W) edge [loop above] (W)
+  (W) edge [bend right] (Z)
+  (W) edge [bend left] (H)
+  (Z) edge [bend left=20] (H)
+  (H) edge [loop below] (H)
+  (G) edge [loop below] (G);
+
+  % Draw curly braces using path decoration
+  \draw [gray,decorate,decoration={brace,amplitude=5pt}]
+  (-0.25cm,6.25cm) -- (-0.25cm,7.75cm)
+  node [black,midway,below=0pt,xshift=-2pt,rotate=-90] {Spin 1/2};
+  \draw [gray,decorate,decoration={brace,amplitude=5pt}]
+  (-0.25cm,3.25cm) -- (-0.25cm,4.75cm)
+  node [black,midway,below=0pt,xshift=-2pt,rotate=-90] {Spin 1};
+  \draw [gray,decorate,decoration={brace,amplitude=5pt}]
+  (-0.25cm,0.00cm) -- (-0.25cm,1.5cm)
+  node [black,midway,below=0pt,xshift=-2pt,rotate=-90] {Spin 0};
+  % Draw mass scales
+  \draw (5.40cm,-0.30cm) rectangle (13.10cm,1.5cm); % draw the box
+  \draw[->,xshift=5.5cm] (0cm,0.5cm) -- coordinate (x axis mid) (7.5cm,0.5cm);
+  \node[below=0.10cm, xshift=3.25cm] at (x axis mid) {mass};
+  \foreach \x/\text in {1/meV, 2/eV,3/keV,4/MeV,5/GeV,6/TeV }
+      \draw [xshift=5.0cm,yshift=0.5cm](\x cm,1pt) -- (\x cm,-3pt)
+      node[anchor=north] {\text};
+  % \node[draw=blue,inner sep=0pt,thick,circle,fit=(x axis mid)] {}; % test fit feature box
+  % should enter the mass values and actually compute the log to get x...
+  \node [text height=10pt] at (5.0cm+1.5cm,0.7cm +2pt) (mnu) {\Pnue,\Pnum,\Pnut};
+  \node [text height=10pt] at (5.0cm+3.5cm,0.7cm +2pt) (mel) {\Pe};
+  \node [text height=10pt] at (5.0cm+4.5cm,0.7cm +2pt) (mmu) {\Pmu};
+  \node [text height=10pt] at (5.0cm+5.05cm,0.7cm+2pt) (mtau) {\Ptau};
+  \node [text height=10pt] at (5.0cm+3.8cm,0.7cm+12pt) (mud) {$\Pup\Pdown$};
+  \node [text height=10pt] at (5.0cm+4.5cm,0.7cm+12pt) (ms) {\Pstrange};
+  \node [text height=10pt] at (5.0cm+5.05cm,0.7cm+12pt) (mcb) {$\Pcharm\Pbottom$};
+  \node [text height=10pt] at (5.0cm+5.75cm,0.7cm+12pt) (mt) {\Ptop};
+
+\end{tikzpicture}
+

@@ -1,0 +1,42 @@
+\section{Jets and \met}
+\label{sec:jetmet}
+
+As mentioned at the end of Section \ref{sec:forces}, jets are collimated spray of hadrons produced
+by the hadronization and fragmentation of quarks and gluons (collectively called ``partons'').
+Several algorithms exist \cite{jetography} for the purpose of reconstructing the energy and momentum
+of the original parton, using various signatures left by the parton's decay products.
+In the case of this analysis, both at the trigger level and at the analysis level, the \akt~algorithm 
+\cite{anti-kt} is used with a characteristic radius parameter of $R=0.5$.
+At the trigger level, only energy information from the calorimeters is used as an input to the
+\akt~algorithm to reconstruct jets.  Jets constructed using calorimeter input alone
+are referred to as ``CaloJets''.  CaloJets provide an acceptable jet energy resolution
+within relatively little computation time.
+At the analysis level, the PF candidates described in Section \ref{sec:reco-pf} are used
+as an input to the \akt~algorithm.  Jets reconstructed using the PF algorithm are referred to as ``PFJets''.
+PFJets have a better energy resolution than CaloJets \cite{pf-1} (especially at low jet \pt), 
+since the PF algorithm measures the momentum of charged hadrons (which carry an average of 90\% of the jet energy)
+using the tracker rather than the calorimeters.  However, PFJet reconstruction requires more computation time
+than CaloJet reconstruction \cite{cms-jets}.
+
+Some particles, like neutrinos, may be produced in $pp$ collisions without interacting
+with the detector.  Neutrinos are neutral, so they do not leave tracks in the inner tracker or muon system,
+and they are weakly interacting, so they do not deposit energy in the calorimeters.
+These particles may only be detected indirectly, via a vector momentum or energy imbalance
+in the transverse plane.  This imbalance (as discussed in Section \ref{sec:coordinates}) is refered to 
+as \metvec, and the magnetude of \metvec~is referred to as \met~(MET).
+Just as there are many ways of calculating jets, there are many ways of calculating \met.
+In the case of this analysis, \met~is calculated using the negative vector sum of the momenta of the 
+PF candidates discussed in Section \ref{sec:reco-pf}.  This is expressed in Equation \ref{eqn:met}:
+\begin{equation}
+  \metvec = - \sum_{i} \vec{p}_{\text{T},i}
+  \label{eqn:met}
+\end{equation}
+where the sum is taken over each PF candidate, $i$, and $\vec{p}_{\text{T},i}$ refers to the 
+vector of the transverse momentum of the $i$th PF candidate \cite{cms-met}.
+
+PFMHT, a comparable variable to \met, is calculated using Equation \ref{eqn:met}.  However, in the case of PFMHT, PFJets
+are summed over instead of PF candidates.  This variable, therefore, is calculated without input from 
+``unclustered energy'' (i.e. without particles from $pp$ collisions that do not form jets).
+The amount of unclustered energy in an event is heavily dependent on the number of pile-up
+$pp$ interactions, and PFMHT is occasionally used as a less pile-up-dependent substitute for \met.
+In this analysis, PFMHT is used exclusively at the trigger level.

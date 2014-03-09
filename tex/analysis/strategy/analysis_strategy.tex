@@ -1,0 +1,142 @@
+\chapter{Analysis: Strategy}
+\label{ch:analysis-strategy}
+
+Leptoquarks present a very attractive target for searches at the LHC. 
+As discussed in Section \ref{sec:lq-ppcollisions}, 
+the pair production cross section of scalar leptoquarks at a $pp$ 
+collider like the LHC depends only on the leptoquark mass.
+As shown in Table \ref{tab:lq-xsection}, this 
+cross section is relatively high: mBRW leptoquarks with a mass of 1 TeV 
+have a pair production cross section of approximately 
+$1.6 \cdot 10^{-4}$~pb in $pp$ collisions at $\sqrt{s} = 7$~TeV.
+In addition, if $\beta = \text{BR}(\text{LQ}\rightarrow\ell^{\pm}q)$
+is not zero, first generation leptoquarks produced at the LHC would decay to
+isolated, energetic electrons, which could be easily triggered upon 
+(Section \ref{sec:trigger}) and reconstructed (Section \ref{sec:reco-electron}) using the CMS detector 
+with relatively little background from Standard Model processes.
+
+This thesis takes $\beta$ as a free parameter, which means that $\beta$ is allowed
+to take any value between 0 and 1, rather than being fixed to a value of $0$,
+$1/2$, or $1$ as discussed in Section \ref{sec:brw-model}.
+This leads to a search for first generation leptoquarks in two channels.
+In the first channel, $\beta$ is taken to be equal to 1, and 
+the decay of pair-produced leptoquarks to two electrons and two jets
+($\text{LQ}\overline{\text{LQ}}\rightarrow eejj$) is considered.
+In the second channel, $\beta$ is taken to be equal to $1/2$, and 
+the decay of pair-produced leptoquarks to one electron, one neutrino, and two jets 
+($\text{LQ}\overline{\text{LQ}}\rightarrow e\nu jj$) is considered.
+As discussed in Section \ref{sec:lq-decays}, a third channel 
+where $\beta$ is taken to be zero and pair-produced leptoquarks decay to two 
+neutrinos and two jets 
+($\text{LQ}\overline{\text{LQ}}\rightarrow \nu\nu jj$) is possible.  
+While the $\beta = 0$ channel is not 
+covered by this analysis, other analyses at CMS are sensitive to decays 
+of massive scalar particles to a final state of \met~and two or more energetic jets \cite{RA1susy-2011}.
+In the rest of this paper, the search for the pair production of scalar 
+leptoquarks where $\beta = 1$ will be referred to as the ``\eejj~channel'',
+and the search where $\beta = 1/2$ will be referred to as the ``\enujj~channel.''
+Results from these two searches may be combined to search for leptoquarks with 
+values of $\beta$ anywhere between 0 and 1  with varying sensitivity.
+
+The basic strategy for the \eejj~channel is to trigger on events with two electrons
+and then to apply an offline selection requiring exactly two electrons and at least two jets.  
+Neither the \eejj~channel nor the \enujj~channel
+requires exactly two jets, since additional jets are frequently produced in $pp$ collisions at the LHC
+by initial state and final state gluon radiation (ISR and FSR).  
+\nomenclature{ISR}{Initial state radiation}
+\nomenclature{FSR}{Final state radiation}
+Both analyses, however,
+only use the two leading jets in \pt~to reconstruct leptoquark candidates.
+Several Standard Model processes exist that produce a final state of two electrons and at least two jets.
+The most significant of these background processes for the \eejj~channel are \zjets~and \ttbar.
+Other background processes in the \eejj~channel include 
+dibosons (WW, WZ, and ZZ), single top,
+\gjets~(where the photon converts to two electrons),
+\wjets~(where at least one jet is misidentified as an electron)
+and QCD multijets (where at least two jets are misidentified as electrons).
+Several variables serve as descriminants to separate leptoquark
+signal from these Standard Model background processes.
+Both the \eejj~channel and the \enujj~channel define an
+\st~variable as the scalar sum of the most energetic objects in the
+final state.  In the case of the \eejj~channel, \st~is defined
+using Equation \ref{eqn:st-eejj}:
+\begin{equation}
+  \st = \pt(e_1) + \pt(e_2) + \pt(j_1) + \pt(j_2) 
+  \label{eqn:st-eejj}
+\end{equation}
+where 
+$\pt(e_1)$ is the scalar value of the \pt~of the leading electron in \pt,
+$\pt(e_2)$ is the scalar value of the \pt~of the second leading electron in \pt,
+$\pt(j_1)$ is the scalar value of the \pt~of the leading jet in \pt, and
+$\pt(j_2)$ is the scalar value of the \pt~of the second leading jet in \pt.
+The average value of \st~is significantly larger for signal events, due to the 
+energetic decay products produced by a heavy boson like a leptoquark.
+Another effective discriminant in the \eejj~channel is the invariant mass
+of the electron pair in the event (\mee).  For \zjets~events
+(the Standard Model background in the \eejj~channel with the highest cross section), the \mee~distribution
+forms a peak at the $Z$ mass of 91.2 GeV, while it is significantly higher
+on average for leptoquarks.  The final discriminant used in the \eejj~channel 
+comes from reconstructing leptoquark candidates.  
+In the \eejj~channel, electrons are paired with 
+jets to reconstruct leptoquark candidates.  
+There are two possible ways to combine two electrons ($e_1$ and $e_2$) and two jets ($j_1$ and $j_2$)
+to form two LQ candidates: ($e_1$--$j_1$,$e_2$--$j_2$)  or ($e_1$--$j_2$, $e_2$--$j_1$).
+The pairing that minimizes the difference
+between the invariant masses of the resulting reconstructed leptoquark candidates is chosen to form leptoquark candidates.
+The mass of the least massive reconstructed leptoquark candidate (\mejmin) is used as the final
+discriminant in the \eejj~channel.
+
+Similarly, the basic strategy for the \enujj~channel is to trigger on events with exactly one
+electron, large \met, and at least two jets and then to apply a tighter offline selection.
+In the case of the \enujj~channel, the most significant background processes are 
+\wjets~and \ttbar.
+Other background processes in the \enujj~channel include dibosons, single top,
+\zjets~(where one electron is not reconstructed)
+and QCD multijets (where one jet is misidentified as an electron).
+A similar \st~variable is defined for the \enujj~channel using Equation \ref{eqn:st-enujj}:
+\begin{equation}
+  \st = \pt(e_1) + \met + \pt(j_1) + \pt(j_2) 
+  \label{eqn:st-enujj}
+\end{equation}
+where $\pt(e_1)$, $\pt(j_1)$, and $\pt(j_2)$ have the same definition
+as in Equation \ref{eqn:st-eejj}, and \met~represents the energy imbalance
+in the transverse plane as reconstructed by the PF algorithm.
+As in the \eejj~channel, the average value of \st~is significantly larger for signal events in the \enujj~channel, due to the 
+energetic decay products produced by a heavy boson like a leptoquark.
+In addition to the \st~variable, another effective discriminant in the \enujj~channel
+is the transverse mass of the electron and \met~in the event (\mt).
+\mt~is defined by Equation \ref{eqn:mt}:
+\begin{equation}
+  \mt = \sqrt{2 \cdot \pt(e_1) \cdot \left[1 - \text{cos}(\Delta\phi(e_1,\met))\right]}
+  \label{eqn:mt}
+\end{equation}
+where $\pt(e_1)$ and \met~have the same definition as in Equation \ref{eqn:st-enujj},
+and $\Delta\phi(e_1,\met)$ is the opening angle in $\phi$ between the leading electron
+in \pt~and the \met.  For \wjets~events (the Standard Model background in the 
+\enujj~channel with the highest cross section), the \mt~distribution forms a Jacobian
+peak close to W mass of 80.4 GeV, while it is significantly higher on average for 
+leptoquarks.
+Another effective discriminant between leptoquarks and \ttbar~and \wjets~background
+events is \met~itself.  \met~is expected to be significantly higher on average
+for leptoquark events than for \ttbar~and \wjets~background events, due to the energetic
+neutrino produced by the leptoquark decay.
+The final discriminant used for the \enujj~channel comes from reconstructing leptoquark candidates.  
+Similarly to the \eejj~channel, there are two possible ways to combine one electron ($e_1$, one neutrino (i.e. \MET) and two jets ($j_1$ and $j_2$)
+to form two leptoquark candidates: ($e$--$j_1$, \met--$j_2$) or ($e$--$j_2$,\met--$j_1$). 
+The pairing that minimizes the difference
+between the transverse masses of the resulting reconstructed leptoquark candidates is chosen to form leptoquark candidates.
+The invariant mass of the electron-jet pairing (\mej) is used as the final discriminant in the
+\enujj~channel.
+
+In both the \eejj~channel and the \enujj~channel, 
+a preselection is defined that is dominated by Standard Model
+background, in order to study the modeling of the various background
+predictions.  Once the backgrounds are well understood,
+a series of final selections is applied using the discriminants for each
+channel: 
+\st, \mee, and \mejmin~for the \eejj~channel and 
+\st, \mt, \met, and \mej~for the \enujj~channel.
+Each final selection is optimized for a given hypothesis for the leptoquark invariant mass,
+ranging between 250 and 900 GeV.
+Further details on the datasets used by this analysis, preselection, final selection optimization,
+and background modeling are given in the following chapters.

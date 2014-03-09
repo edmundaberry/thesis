@@ -1,0 +1,84 @@
+\subsection{Luminosity measurement}
+\label{sec:lumi}
+
+As discussed in Section \ref{sec:lhc-parameters}, instantaneous luminosity, $\mathcal{L}$, is
+the ratio between the production rate in Hz for given physics process in a collider and the 
+production cross section for that process.  Integrated luminosity, \Lint, 
+refers to an integral of instantanenous luminosity over a period of time.
+Instantaneous luminosity depends only on beam parameters,
+and it is expressed in units of $\text{cm}^{-2}\text{s}^{-1}$.
+In CMS, instantaneous luminosity is measured with the pixel tracker (see Section \ref{sec:tracker}),
+using a method based on pixel cluster counting (PCC).  
+\nomenclature{PCC}{Pixel cluster counting}
+The following description of the PCC method
+is taken from Reference \cite{cms-lumi-uncertainty}.
+
+In the PCC method, an effective cross section for the formation
+of pixel clusters is determined using results from a Van der Meer
+scan.  That cross section, $\sigma_{\text{pixel}}$, is used
+to determine the instantaneous luminosity for each 23.3 second
+luminosity section of the 2011 physics sample.  The high voltage 
+of the pixel tracker is only turned on during stable collisions,
+and pixel data is not available when the CMS data acquisition framework is not running.
+For these reasons, the PCC method is not useful for online luminosity monitoring.
+The PCC method is, however, used for all integrated luminosity measurements
+mentioned in this thesis.
+
+There are roughly 66 million pixels in the pixel tracker.
+About 200 pixel clusters are formed in each minimum bias interaction,
+and there are about 5 pixels per pixel cluster.  This means that
+even at high luminosities, the occupation of the pixel detector
+is on the order of $1/1000$, and the probability of a given pixel
+being hit by two different tracks is very low.
+As a result, the number of pixel clusters per 
+bunch crossing is expected to be very linear with the number
+of interactions per bunch cross and therefore a good measure 
+of instantaneous luminosity.
+
+Within the LHC, each bunch crossing produces some number of $pp$ 
+interactions, which in turn produce some number of pixel clusters.
+If these interactions are recorded using zero-bias triggers, then
+the mean number of pixel clusters per trigger is expressed by 
+Equation \ref{eqn:lumi1}:
+\begin{equation}
+  \left<N_{\text{cluster}}\right> = \left<N_{\text{cluster/interaction}}\right> \left<N_{\text{interactions}}\right> \equiv \left<N_{\text{cluster/interaction}}\right> \mu
+  \label{eqn:lumi1}
+\end{equation}
+where $\left<N_{\text{cluster}}\right>$ is the average number of pixel clusters formed per bunch crossing,
+$\mu = \left<N_{\text{interactions}}\right>$ is the average number of $pp$ interactions in a bunch crossing, and
+$\left<N_{\text{cluster/interaction}}\right>$ is the average number pixel clusters formed per $pp$ interaction.
+
+$\mu$, the average number of $pp$ interactions in a bunch crossing, may also be expressed
+as a function of the $pp$ interaction cross section, $\sigma_{\text{interaction}}$, the per-bunch
+instantaneous luminosity, $\mathcal{L}$, and the LHC orbital frequency, $f$, using Equation \ref{eqn:lumi2}:
+\begin{equation}
+  \mu = \frac{\sigma_{\text{interaction}}}{f}\mathcal{L}
+  \label{eqn:lumi2}
+\end{equation}
+The LHC orbital frequency, $f$, is shown in Section \ref{sec:lhc-parameters} to be 11.246 kHz.
+
+Equations \ref{eqn:lumi1} and \ref{eqn:lumi2} may be combined as follows in Equation \ref{eqn:lumi3}:
+\begin{equation}
+  \left<N_{\text{cluster}}\right> = \left<N_{\text{cluster/interaction}}\right> \frac{\sigma_{\text{interaction}}}{f}\mathcal{L}
+  \label{eqn:lumi3}
+\end{equation}
+If $\sigma_{\text{pixel}}$ is defined to be equal to the product of 
+$\sigma_{\text{interaction}}$ and $\left<N_{\text{cluster/interaction}}\right>$,
+then Equation \ref{eqn:lumi3} may be rewritten as:
+\begin{equation}
+  \left<N_{\text{cluster}}\right> = \frac{\sigma_{\text{pixel}}}{f}\mathcal{L}
+  \label{eqn:lumi4}
+\end{equation}
+This allows $\sigma_{\text{pixel}}$ to be expressed in terms of 
+$\left<N_{\text{cluster}}\right>$, $f$, and $\mathcal{L}$: all of which
+are measureable during a Van der Meer scan, as was documented in Reference \cite{cms-lumi-uncertainty}.
+The relevant relationship is given by Equation \ref{eqn:lumi5}:
+\begin{equation}
+  \sigma_{\text{pixel}} = \left<N_{\text{cluster}}\right> f \mathcal{L}^{-1}
+  \label{eqn:lumi5}
+\end{equation}
+
+The total systematic uncertainty on the luminosity measurement is 2.2\%.
+The dominant contributions to this uncertainty are ``afterglow'' (energy
+from late-arriving particles and from activated detector material)
+and variations between Van der Meer scans.

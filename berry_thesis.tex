@@ -1,0 +1,102 @@
+\input{tex/preamble/preamble.tex}                                                                                        
+\begin{document}
+  
+  \pagenumbering{roman}
+
+  \maketitle
+  \newpage
+  
+  \thispagestyle{empty}
+  \vspace*{3in}
+  \centerline{$\copyright$ Copyright by Edmund A. Berry, 2013. All rights reserved.}
+  \setcounter{page}{2}
+
+  \input{tex/abstract/abstract.tex}
+  \tableofcontents
+  \input{tex/acknowledgements/acknowledgements}
+  \addcontentsline{toc}{chapter}{List of Abbreviations}
+  \printnomenclature
+  \lhead{LIST OF ABBREVIATIONS} % must set header manually for this page
+  
+  \newpage
+  \lhead{\leftmark} % change header format back
+
+  \pagenumbering{arabic}
+
+  \input{tex/forward/forward.tex}
+                              
+  \input{tex/theory/theory.tex}   
+  \input{tex/experiment/experiment.tex}
+
+  \input{tex/lhc/lhc.tex}
+
+  \input{tex/cms/cms.tex}
+  \input{tex/cms/cms_coordinates.tex}
+  \input{tex/cms/cms_magnet.tex}
+  \input{tex/cms/cms_tracker.tex}
+  \input{tex/cms/cms_ecal.tex}
+  \input{tex/cms/cms_hcal.tex}
+  \input{tex/cms/cms_muon.tex}
+  \input{tex/cms/cms_lumi.tex} 
+  \input{tex/cms/cms_trig.tex} 
+  
+  \input{tex/reco/reco.tex}
+  \input{tex/reco/reco_track.tex}
+  \input{tex/reco/reco_vtx.tex}
+  \input{tex/reco/reco_electron.tex}
+  \input{tex/reco/reco_muon.tex}
+  \input{tex/reco/reco_pf.tex}
+  \input{tex/reco/reco_jet.tex}
+  \input{tex/reco/reco_gen.tex} 
+
+  \input{tex/analysis/strategy/analysis_strategy.tex}
+
+  \input{tex/analysis/samples/analysis_samples.tex}
+  \input{tex/analysis/samples/analysis_samples_data.tex}
+  \input{tex/analysis/samples/analysis_samples_mc.tex}
+  
+  \input{tex/analysis/object_selection/analysis_object_selection.tex}
+  \input{tex/analysis/object_selection/analysis_object_selection_electron.tex}
+  \input{tex/analysis/object_selection/analysis_object_selection_muon.tex}
+  \input{tex/analysis/object_selection/analysis_object_selection_jetmet.tex}
+
+  \input{tex/analysis/event_selection/analysis_event_selection.tex}
+  \input{tex/analysis/event_selection/analysis_event_selection_event_filters.tex}
+  \input{tex/analysis/event_selection/analysis_event_selection_eejj.tex}
+  \input{tex/analysis/event_selection/analysis_event_selection_eejj_trigger.tex}
+  \input{tex/analysis/event_selection/analysis_event_selection_eejj_preselection.tex}
+  \input{tex/analysis/event_selection/analysis_event_selection_eejj_selection_optimization.tex}
+  \input{tex/analysis/event_selection/analysis_event_selection_eejj_final_selection.tex}
+  \input{tex/analysis/event_selection/analysis_event_selection_enujj.tex}
+  \input{tex/analysis/event_selection/analysis_event_selection_enujj_trigger.tex}
+  \input{tex/analysis/event_selection/analysis_event_selection_enujj_preselection.tex}
+  \input{tex/analysis/event_selection/analysis_event_selection_enujj_selection_optimization.tex}
+  \input{tex/analysis/event_selection/analysis_event_selection_enujj_final_selection.tex}
+  \input{tex/analysis/event_selection/analysis_event_selection_enujj_final_selection_update.tex}
+
+  \input{tex/analysis/backgrounds/analysis_backgrounds.tex}
+  \input{tex/analysis/backgrounds/analysis_backgrounds_qcd.tex}
+  \input{tex/analysis/backgrounds/analysis_backgrounds_ttbar.tex}
+  \input{tex/analysis/backgrounds/analysis_backgrounds_vjets.tex}
+  \input{tex/analysis/backgrounds/analysis_backgrounds_other.tex}
+  
+  \input{tex/analysis/systematics/analysis_systematics.tex}
+
+  \input{tex/analysis/results/analysis_results.tex}
+  \input{tex/conclusion/conclusion.tex}
+
+  % Currently no appendices needed
+  % \pagebreak %% make an empty page before starting the appendices
+  % \thispagestyle{empty}
+  % $ $
+  % \pagebreak
+  % \appendix
+  % \input{tex/appendices/mcLists.tex}
+
+  \bibliographystyle{utphysLSB}
+  \begin{singlespace} % bibliography need not be doublespaced
+  \bibliography{berry_thesis} % bib extension added by default
+  \end{singlespace}
+
+\end{document}
+ 

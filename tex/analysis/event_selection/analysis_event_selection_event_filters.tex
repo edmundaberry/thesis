@@ -1,0 +1,36 @@
+\section{Event filters}
+\label{sec:event-filters}
+
+All events in this analysis (both \eejj~and \enujj~channels)
+are required to pass the event filters described in this section.  These filters
+are designed to reject beam background, detector electronics
+noise, and other detector artifacts.  These filters are placed on both
+data and MC events, unless otherwise indicated.
+
+\begin{itemize}
+  \item {\bf BPTX coincidence:} The beam pickup timing for the experiments (BPTX)
+    \nomenclature{BPTX}{Beam pickup timing for the experiments} is a beam pickup
+    device designed to provide the experiments with precise information on the bunch structure
+    and the timing of the LHC beam. Two are installed for CMS: 175 m in either direction of the IP.
+    A coincidence of signals from both BPTX detectors (indicating a $pp$ crossing at the IP)
+    is required for all data events in this analysis.  BPTX coincidence is not required 
+    for MC events.
+  \item {\bf Primary vertex requirement:} At least one ``good'' primary vertex is 
+    required to be reconstructed in each event.  A good primary vertex is defined
+    to be a primary vertex reconstructed with more than four degrees of freedom
+    (see Section \ref{sec:reco-vtx}) and to have position with $|z| < 24$ cm and 
+    $\rho < 2$ cm.
+  \item {\bf Beam scraping filter:} This filter requires a fraction of {\it highPurity}
+    tracks (see Section \ref{sec:reco-track}) to be great than 25\% in events with more than
+    10 tracks.  This requirement removes a rare beam-induced background known as ``beam scraping'',
+    which arises from interactions between the beam and both residual gas particles 
+    and beam collimators.  These interactions can produces showers of secondary particles, which
+    the tracker registers as isotropic noise \cite{cms-jinst}.
+  \item {\bf Beam halo filter:} This filter takes information from the endcap muon system
+    (see the CSCs in Section \ref{sec:muon}) to reject a beam-induced background known 
+    as ``beam halo'', which manifests as charged particles travelling parallel to the beam
+    at a large radius.  Beam halo can be severely detrimental to \met~measurements.
+  \item {\bf HBHE noise filter:} This filter is designed to reject 
+    noise from the HB and HE readout electronics, which can be mistakenly reconstructed
+    as hadronic energy deposits.  
+\end{itemize}

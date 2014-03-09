@@ -1,0 +1,97 @@
+\section{Data samples}
+\label{sec:data-samples}
+
+The datasets used for this analysis were collected by the CMS detector during 2011, when
+the LHC was operating with a collision energy of 7 TeV.  The entire 2011 dataset
+corresponds to an  integrated luminosity of \lumi. 
+Only data that were taken during a period with stable
+LHC beams and with all CMS subdetectors operating without problems was used in the analysis.
+Known dead or noisy channels in the calorimeters were masked in the reconstruction.
+The average number of pile-up interactions for the first period of data 
+taking ({\it Run2011A}, from March to August, 2011) was approximately \NpileupA.
+For the second period of data taking ({\it Run2011B}, from September to October, 2011) the average
+number of pile-up interactions was approximately \NpileupB. 
+The average number of pile-up interactions over the entire 
+data sample considered is approximately \Npileup.
+
+For the \eejj~channel, the data stored in the {\it Photon} PD
+were used as reported in Table~\ref{tab:PhotonDataset}. The events used in this channel  
+were collected by unprescaled double-photon or double-electron triggers as described in 
+Section~\ref{sec:eejjTrigger}.
+
+For the \enujj~channel, the data stored in the {\it SingleElectron} and 
+{\it ElectronHad}  PDs were used as reported in Table~\ref{tab:SingleElectronPlusElectronHadDataset}. 
+The events used in this channel were collected by unprescaled  single-electron or 
+electron-PFMHT-jet-jet triggers as described in Section~\ref{sec:enujjTrigger}.
+
+For the determination of the \ttbar~background in the \eejj~channel, the data stored in the {\it MuEG} PD
+were used as reported in Table~\ref{tab:MuEGDataset}. The events used in this study  
+were collected by unprescaled muon-plus-photon or muon-plus-electron triggers as described 
+in Section~\ref{sec:eejjTTbarBkg}.
+
+Finally, for the determination of the QCD multijet background in both the \eejj and \enujj channels, 
+the data stored in the {\it Photon} PD were used as reported in Table~\ref{tab:PhotonDataset}. 
+The events used in this study were collected by prescaled single-photon triggers as 
+described in Section~\ref{sec:qcd}.
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{l|c|c}
+      Dataset & Run range & \Lint~[pb$^{-1}$]\\
+      \hline \hline
+      /Photon/Run2011A-May10ReReco-v1/AOD  & 160329--163869 & 215.06 \\
+      /Photon/Run2011A-PromptReco-v4/AOD & 165071--168437 & 948.92 \\
+      /Photon/Run2011A-05Aug2011-v1/AOD & 170053--172619 & 389.82 \\
+      /Photon/Run2011A-PromptReco-v6/AOD & 172620--175770 & 705.57 \\
+      /Photon/Run2011B-PromptReco-v1/AOD & 175832--180296 & 2693 \\
+      \hline
+      \multicolumn{2}{r|}{Total integrated luminosity (\Lint)} & \lumiPhoton \\
+    \end{tabular}
+    \caption{{\it Photon} datasets: the dataset name, the run range considered, and the corresponding integrated 
+      luminosity \Lint~of the sample after removing data taking periods with known detector problems. 
+    }
+    \label{tab:PhotonDataset}
+  \end{center}
+\end{table}
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{l|c|c}
+      Dataset & Run range & \Lint~[pb$^{-1}$]\\
+      \hline \hline
+      /SingleElectron/Run2011A-May10ReReco-v1/AOD  & 160329--163869 & 215.63 \\
+      /ElectronHad/Run2011A-PromptReco-v4/AOD & 165071--168437 & 931.61 \\
+      /ElectronHad/Run2011A-05Aug2011-v1/AOD & 170053--172619 & 389.88 \\
+      /ElectronHad/Run2011A-PromptReco-v6/AOD & 172620--175770 & 706.72 \\
+      /ElectronHad/Run2011B-PromptReco-v1/AOD & 175832--180296 & 2702 \\
+      \hline
+      \multicolumn{2}{r|}{Total integrated luminosity (\Lint)} & \lumiSingleElePlusEleHad \\
+    \end{tabular}
+    \caption{{\it SingleElectron} and {\it ElectronHad}  datasets: the dataset name, the run range considered, and the corresponding integrated 
+      luminosity \Lint~of the sample after removing data taking periods with known detector problems. 
+    }
+    \label{tab:SingleElectronPlusElectronHadDataset}
+  \end{center}
+\end{table}
+
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{l|c|c}
+      Dataset & Run range & \Lint~(pb$^{-1}$)\\
+      \hline \hline
+      /MuEG/Run2011A-May10ReReco-v1/AOD  & 160329--163869 & 215.63 \\
+      /MuEG/Run2011A-PromptReco-v4/AOD & 165071--168437 & 946.55 \\
+      /MuEG/Run2011A-05Aug2011-v1/AOD & 170053--172619 & 389.88  \\
+      /MuEG/Run2011A-PromptReco-v6/AOD & 172620--175770 & 706.72 \\
+      /MuEG/Run2011B-PromptReco-v1/AOD & 175832--180296 & 2706 \\
+      \hline
+      \multicolumn{2}{r|}{Total integrated luminosity (\Lint)} & \lumiMuEG \\
+    \end{tabular}
+    \caption{{\it MuEG} datasets: the dataset name, the run range considered, and the corresponding integrated 
+      luminosity \Lint~of the sample after removing data taking periods with known detector problems. 
+    }
+    \label{tab:MuEGDataset}
+  \end{center}
+\end{table}   
+   

@@ -1,0 +1,45 @@
+\section{Muon reconstruction}
+\label{sec:reco-muon}
+
+Muons produced in $pp$ collisions in CMS 
+are measured by reconstructing their trajectories to form ``tracks''.
+Muon tracks are reconstructed independently 
+by the inner tracker and by the muon subsystem, and those two
+independent measurements are then combined.
+The tracks reconstructed by the inner tracker system alone 
+are called ``tracker tracks''.
+The tracks reconstructed by the muon subsystem alone are called
+``standalone muon tracks''.
+There are two reconstruction methods using these objects 
+as inputs: an outside-in method, which produces``global muons'',
+and an inside-out method, which produces ``tracker muons''.
+
+The global muon reconstruction method begins with the
+collection of all standalone muons from the muon subsystem.
+For each standalone muon, the algorithm searches for a matching
+tracker track.  If a matching tracker track is found, 
+a global muon track is created and refit
+using all of the hits from both the standalone muon and the 
+tracker track.  For muons with large \pt, the global muon 
+fit can improve the muon momentum resolution over a tracker-only fit.
+
+The tracker muon reconstruction method begins with the 
+collection of all tracker tracks with $\pt>0.5$~\GeV and 
+$p>2.5$~\GeV.  For each of these tracker tracks, the algorithm
+searches for a matching standalone muon track, taking expected
+energy loss and uncertainty from multiple scattering into account.
+If one muon segment (a short track stub made of DT or CSC hits) 
+matches the position predicted by the tracker track, 
+the tracker track qualifies as a tracker muon track.  The
+tracker muon reconstruction method is more efficient for low
+momentum ($p < 5$~\GeV) muons, since it requires only one muon segment in the 
+muon system, while the global muon method generally only
+becomes efficient with two or more segments.
+
+A third category of muons is added as a catch-all.  ``Standalone muons'' 
+account for only 1\% of muons from collisions, and they consist of 
+standalone muon tracks that are rejected by both the global muon 
+and tracker muon reconstruction methods.  These muons are uncommon,
+because the tracker and global muon reconstruction methods have such
+a high efficiency.  They also have a non-negligable fake rate 
+from cosmic muons \cite{muon-1}.

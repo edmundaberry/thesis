@@ -1,0 +1,32 @@
+\subsection{Coordinate system}
+\label{sec:coordinates}
+
+The CMS detector is described using a coordinate
+system with its origin at the nominal collision point.
+The $x$-axis points radially inward, towards the center of the LHC;
+the $y$-axis points vertically upward; and 
+the $z$-axis points along the clockwise beam direction, towards the Jura Mountains.
+Because CMS is cyllindrical in shape, it is often described using a cyllindrical
+coordinate system.  
+The radial distance, $r$, is measured from the origin.
+The longitudinal direction is the same as the $z$-axis, and the transverse direction is in the $x-y$-plane.
+The azimuthal angle, $\phi$, is measured in the $x-y$-plane, and the $x$-axis is taken to be $\phi = 0$.
+The polar angle, $\theta$, is measured from the $z$-axis.  When referring to particle trajectory, rapidity, $y$, is often
+used instead of $\theta$ because rapidity difference is Lorentz-invariant against a boost in the $z$-axis, while
+$\theta$ is not.  A particle's rapidity is defined according to Equation \ref{eqn:rapidity}:
+\begin{equation}
+  y = \frac{1}{2}\text{ln}\left(\frac{E+p_{\text{z}}}{E-p_{\text{z}}}\right)
+  \label{eqn:rapidity}
+\end{equation}
+where $E$ is particle energy and $p_{\text{z}}$ is particle momentum in the $z$-direction.
+For relativistic particles (such that $E \gg m$) rapidity may be approximated as ``pseudorapidity'', $\eta$.
+Pseudorapidity may be expressed in terms of the polar angle, $\theta$, using Equation \ref{eqn:pseudorapidity}:
+\begin{equation}
+  \eta = -\text{ln}\left(\text{tan}\frac{\theta}{2}\right)
+  \label{eqn:pseudorapidity}
+\end{equation}
+A particle's momentum and energy in the transverse direction are denoted \pt~and \et, 
+the values for which are calculated from their $x$ and $y$ components.
+The imbalance of the total energy measured in the transverse plane is refered to
+as a vector: \metvec.  The magnitude of \metvec~is refered to as \met~or ``missing transverse energy'' (MET).
+\nomenclature{MET}{Missing transverse energy}
